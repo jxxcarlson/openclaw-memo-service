@@ -36,33 +36,32 @@ if [ ! -d "$INBOX_DIR" ]; then
     exit 1
 fi
 
-# Count files in inbox before processing
-initial_inbox_count=$(find "$INBOX_DIR" -maxdepth 1 -type f | wc -l)
+# Count files in inbox
+file_count=$(find "$INBOX_DIR" -maxdepth 1 -type f | wc -l)
 
-if [ "$initial_inbox_count" -eq 0 ]; then
+if [ "$file_count" -eq 0 ]; then
     log "No files to process"
     exit 0
 fi
 
-log "Found $initial_inbox_count file(s) in inbox"
+log "Found $file_count file(s) in inbox"
 
 # Run transcription script and capture output
 transcribe_output=$("$TRANSCRIBE_SCRIPT" 2>&1)
 transcribe_exit_code=$?
 
 # Log transcription output
-while IFS= read -r line; do
+echo "$transcribe_output" | while IFS= read -r line; do
     log "  $line"
-done <<< "$transcribe_output"
+done
 
 if [ $transcribe_exit_code -ne 0 ]; then
     log "⚠ Transcription completed with errors (exit code: $transcribe_exit_code)"
     exit 0  # Non-fatal: don't stop the cron job
 fi
 
-# Count files processed by comparing inbox before and after
-final_inbox_count=$(find "$INBOX_DIR" -maxdepth 1 -type f | wc -l)
-archive_count=$((initial_inbox_count - final_inbox_count))
+# Count files processed (files that moved to archive)
+archive_count=$(find "$MEMOS_DIR/audio-archive" -mmin -1 -type f | wc -l)
 
 log "✓ Success ($archive_count files processed)"
 
@@ -85,16 +84,15 @@ send_telegram_notification() {
     local telegram_message="✓ Transcription ($timestamp)%0A${message}"
 
     # Send via Telegram Bot API
-    local curl_output
-    curl_output=$(curl -s -X POST \
+    curl -s -X POST \
         "https://api.telegram.org/bot${telegram_token}/sendMessage" \
-        -d "chat_id=${telegram_chat_id}&text=${telegram_message}" 2>&1)
+        -d "chat_id=${telegram_chat_id}&text=${telegram_message}" \
+        > /dev/null 2>&1
 
     if [ $? -eq 0 ]; then
         log "Telegram notification sent"
     else
-        log "⚠ Telegram notification failed: $curl_output"
-        return 1
+        log "⚠ Failed to send Telegram notification"
     fi
 }
 

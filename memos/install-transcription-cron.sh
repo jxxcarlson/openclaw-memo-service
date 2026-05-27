@@ -34,13 +34,16 @@ fi
 mkdir -p "$HOME/Library/LaunchAgents"
 
 # Check if already installed
-if launchctl list | grep -q "com.carlson.memo-transcribe"; then
+if launchctl list | grep "^com.carlson.memo-transcribe" > /dev/null; then
     echo "LaunchAgent already loaded. Reloading..."
     launchctl unload "$LAUNCH_AGENT_DST" 2>/dev/null || true
 fi
 
 # Copy plist to LaunchAgents
-cp "$LAUNCH_AGENT_SRC" "$LAUNCH_AGENT_DST"
+cp "$LAUNCH_AGENT_SRC" "$LAUNCH_AGENT_DST" || {
+    echo "ERROR: Failed to copy plist to $LAUNCH_AGENT_DST"
+    exit 1
+}
 echo "Installed LaunchAgent to $LAUNCH_AGENT_DST"
 
 # Verify plist syntax
@@ -54,10 +57,10 @@ launchctl load "$LAUNCH_AGENT_DST"
 echo "LaunchAgent loaded"
 
 # Verify it's running
-if launchctl list | grep -q "com.carlson.memo-transcribe"; then
+if launchctl list | grep "^com.carlson.memo-transcribe" > /dev/null; then
     echo "✓ Installation successful"
     echo ""
-    echo "Status: $(launchctl list | grep memo-transcribe)"
+    echo "Status: $(launchctl list | grep "^com.carlson.memo-transcribe")"
     echo ""
     echo "Check logs with: tail -f $MEMOS_DIR/transcribe-cron.log"
 else

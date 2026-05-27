@@ -28,6 +28,10 @@ The existing `transcribe.sh` script remains unchanged and is called by the wrapp
 - Send Telegram notification on success
 - Handle errors gracefully without stopping
 
+**File Lifecycle:**
+- **On success:** Audio file is moved to `memos/audio-archive/` (prevents re-processing)
+- **On failure:** Audio file remains in `memos/audio-inbox/` for manual review or retry
+
 **Behavior:**
 - Idempotent: safe to run repeatedly, even with no new files
 - Non-blocking: completes within seconds, suitable for frequent execution

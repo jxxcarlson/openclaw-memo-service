@@ -1,3 +1,8 @@
+# Environment and secrets
+.env
+.env.local
+*.local.json
+
 # Telegram memo polling
 memos/.poll.log
 memos/.poll.log.*

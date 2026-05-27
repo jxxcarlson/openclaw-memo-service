@@ -1,0 +1,15 @@
+{
+  "name": "memos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "telegram-memo-handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-telegram-bot-api": "^0.67.0"
+  }
+}

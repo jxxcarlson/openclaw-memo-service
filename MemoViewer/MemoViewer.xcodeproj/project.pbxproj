@@ -12,6 +12,10 @@
 		3D1A2B222C1B3E4F001A2B3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D1A2B212C1B3E4F001A2B3C /* Assets.xcassets */; };
 		3D1A2B252C1B3E4F001A2B3C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D1A2B242C1B3E4F001A2B3C /* Preview Assets.xcassets */; };
 		3D1A2B2F2C1B3E4F001A2B3C /* MemoViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1A2B2E2C1B3E4F001A2B3C /* MemoViewerTests.swift */; };
+		3D1A2B4A2C1B4F5E001A2B3C /* MemoFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1A2B4B2C1B4F5E001A2B3C /* MemoFile.swift */; };
+		3D1A2B4C2C1B4F5F001A2B3C /* FileSystemHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1A2B4D2C1B4F5F001A2B3C /* FileSystemHelper.swift */; };
+		3D1A2B4E2C1B5060001A2B3C /* MemoFileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1A2B4F2C1B5060001A2B3C /* MemoFileTests.swift */; };
+		3D1A2B5A2C1B5071001A2B3C /* FileSystemHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1A2B5B2C1B5071001A2B3C /* FileSystemHelperTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +37,10 @@
 		3D1A2B262C1B3E4F001A2B3C /* MemoViewer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MemoViewer.entitlements; sourceTree = "<group>"; };
 		3D1A2B2A2C1B3E4F001A2B3C /* MemoViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MemoViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D1A2B2E2C1B3E4F001A2B3C /* MemoViewerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoViewerTests.swift; sourceTree = "<group>"; };
+		3D1A2B4B2C1B4F5E001A2B3C /* MemoFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoFile.swift; sourceTree = "<group>"; };
+		3D1A2B4D2C1B4F5F001A2B3C /* FileSystemHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSystemHelper.swift; sourceTree = "<group>"; };
+		3D1A2B4F2C1B5060001A2B3C /* MemoFileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoFileTests.swift; sourceTree = "<group>"; };
+		3D1A2B5B2C1B5071001A2B3C /* FileSystemHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSystemHelperTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +105,8 @@
 			isa = PBXGroup;
 			children = (
 				3D1A2B2E2C1B3E4F001A2B3C /* MemoViewerTests.swift */,
+				3D1A2B4F2C1B5060001A2B3C /* MemoFileTests.swift */,
+				3D1A2B5B2C1B5071001A2B3C /* FileSystemHelperTests.swift */,
 			);
 			path = MemoViewerTests;
 			sourceTree = SOURCE_ROOT;
@@ -112,6 +122,7 @@
 		3D3C5D7B2C1B5F9D001C3D4E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				3D1A2B4B2C1B4F5E001A2B3C /* MemoFile.swift */,
 			);
 			path = Models;
 			sourceTree = SOURCE_ROOT;
@@ -119,6 +130,7 @@
 		3D3C5D7C2C1B5FAE001C3D4E /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				3D1A2B4D2C1B4F5F001A2B3C /* FileSystemHelper.swift */,
 			);
 			path = Utilities;
 			sourceTree = SOURCE_ROOT;
@@ -226,6 +238,8 @@
 			files = (
 				3D1A2B202C1B3E4F001A2B3C /* ContentView.swift in Sources */,
 				3D1A2B1E2C1B3E4F001A2B3C /* MemoViewerApp.swift in Sources */,
+				3D1A2B4A2C1B4F5E001A2B3C /* MemoFile.swift in Sources */,
+				3D1A2B4C2C1B4F5F001A2B3C /* FileSystemHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,6 +248,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D1A2B2F2C1B3E4F001A2B3C /* MemoViewerTests.swift in Sources */,
+				3D1A2B4E2C1B5060001A2B3C /* MemoFileTests.swift in Sources */,
+				3D1A2B5A2C1B5071001A2B3C /* FileSystemHelperTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

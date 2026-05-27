@@ -10,3 +10,23 @@ memos/.poll-state.json
 memos/telegram-memo.config.js
 memos/node_modules/
 memos/package-lock.json
+
+# Personal workspace configuration
+AGENTS.md
+HEARTBEAT.md
+IDENTITY.md
+MEMORY.md
+SOUL.md
+TOOLS.md
+USER.md
+config.md
+.openclaw/
+
+# User data and logs
+memos/[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9].md
+memos/.session.json
+memos/.status.json
+memos/*.log
+memos/audio-archive/
+memos-archive/
+notes.md

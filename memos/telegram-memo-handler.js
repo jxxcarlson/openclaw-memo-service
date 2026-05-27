@@ -71,4 +71,67 @@ function getCurrentTimestamp() {
   return `${hours}:${minutes}`;
 }
 
-module.exports = { parseMessage, readSession, writeSession, getTodayMemoPath, getCurrentTimestamp };
+// Main handler: read Telegram message from stdin, process, update files
+function processMessage(rawMessage) {
+  if (!rawMessage || rawMessage.trim().length === 0) {
+    console.error('No message content');
+    process.exit(1);
+  }
+
+  // Parse message
+  const { topic, content } = parseMessage(rawMessage);
+
+  // Skip if only whitespace after parsing
+  if (content.length === 0) {
+    console.log('Skipped: empty content after parsing');
+    process.exit(0);
+  }
+
+  // Get or use current topic
+  const timestamp = getCurrentTimestamp();
+  const session = readSession();
+  const finalTopic = topic || session.currentTopic || 'Telegram';
+
+  // Get memo file path
+  const memoPath = getTodayMemoPath();
+
+  // Ensure memo directory exists
+  const memoDir = path.dirname(memoPath);
+  if (!fs.existsSync(memoDir)) {
+    fs.mkdirSync(memoDir, { recursive: true });
+  }
+
+  // Create file with header if needed
+  if (!fs.existsSync(memoPath)) {
+    const dateStr = path.basename(memoPath, '.md');
+    fs.writeFileSync(memoPath, `# ${dateStr}\n`, 'utf8');
+  }
+
+  // Append entry to memo file
+  const entry = `\n## ${timestamp} — ${finalTopic}\n\n${content}\n`;
+  try {
+    fs.appendFileSync(memoPath, entry, 'utf8');
+  } catch (err) {
+    console.error('Error writing memo:', err.message);
+    process.exit(1);
+  }
+
+  // Update session with new topic (if provided) and timestamp
+  writeSession(topic, timestamp);
+
+  console.log(`Added to ${path.basename(memoPath)}: ${finalTopic}`);
+  process.exit(0);
+}
+
+module.exports = { parseMessage, readSession, writeSession, getTodayMemoPath, getCurrentTimestamp, processMessage };
+
+// CLI entry point: read from stdin if invoked directly
+if (require.main === module) {
+  let message = '';
+  process.stdin.on('data', (chunk) => {
+    message += chunk.toString();
+  });
+  process.stdin.on('end', () => {
+    processMessage(message);
+  });
+}

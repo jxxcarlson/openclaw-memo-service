@@ -1,0 +1,12 @@
+{
+  "colors" : [
+    {
+      "idiom" : "mac",
+      "type" : "appearance-based"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

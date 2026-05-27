@@ -1,0 +1,7 @@
+# Telegram memo polling
+memos/.poll.log
+memos/.poll.log.*
+memos/.poll-state.json
+memos/telegram-memo.config.js
+memos/node_modules/
+memos/package-lock.json

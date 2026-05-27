@@ -12,21 +12,10 @@
 		3D1A2B222C1B3E4F001A2B3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D1A2B212C1B3E4F001A2B3C /* Assets.xcassets */; };
 		3D1A2B252C1B3E4F001A2B3C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D1A2B242C1B3E4F001A2B3C /* Preview Assets.xcassets */; };
 		3D1A2B2F2C1B3E4F001A2B3C /* MemoViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1A2B2E2C1B3E4F001A2B3C /* MemoViewerTests.swift */; };
-		3D1A2B392C1B3E4F001A2B3C /* MemoViewerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1A2B382C1B3E4F001A2B3C /* MemoViewerUITests.swift */; };
-		3D1A2B3B2C1B3E4F001A2B3C /* MemoViewerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1A2B3A2C1B3E4F001A2B3C /* MemoViewerUITestsLaunchTests.swift */; };
-		3D2B4C5D2C1B4E6A001B2C3D /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2B4C5C2C1B4E6A001B2C3D /* Memo.swift */; };
-		3D2B4C5F2C1B4E7B001B2C3D /* FileManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2B4C5E2C1B4E7B001B2C3D /* FileManager+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		3D1A2B2B2C1B3E4F001A2B3C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3D1A2B142C1B3E4F001A2B3C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3D1A2B1B2C1B3E4F001A2B3C;
-			remoteInfo = MemoViewer;
-		};
-		3D1A2B352C1B3E4F001A2B3C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3D1A2B142C1B3E4F001A2B3C /* Project object */;
 			proxyType = 1;
@@ -44,11 +33,6 @@
 		3D1A2B262C1B3E4F001A2B3C /* MemoViewer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MemoViewer.entitlements; sourceTree = "<group>"; };
 		3D1A2B2A2C1B3E4F001A2B3C /* MemoViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MemoViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D1A2B2E2C1B3E4F001A2B3C /* MemoViewerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoViewerTests.swift; sourceTree = "<group>"; };
-		3D1A2B342C1B3E4F001A2B3C /* MemoViewerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MemoViewerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3D1A2B382C1B3E4F001A2B3C /* MemoViewerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoViewerUITests.swift; sourceTree = "<group>"; };
-		3D1A2B3A2C1B3E4F001A2B3C /* MemoViewerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoViewerUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		3D2B4C5C2C1B4E6A001B2C3D /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
-		3D2B4C5E2C1B4E7B001B2C3D /* FileManager+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,13 +50,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3D1A2B312C1B3E4F001A2B3C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -81,7 +58,6 @@
 			children = (
 				3D1A2B1E2C1B3E4F001A2B3C /* MemoViewer */,
 				3D1A2B2D2C1B3E4F001A2B3C /* MemoViewerTests */,
-				3D1A2B372C1B3E4F001A2B3C /* MemoViewerUITests */,
 				3D1A2B1C2C1B3E4F001A2B3C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,7 +67,6 @@
 			children = (
 				3D1A2B1B2C1B3E4F001A2B3C /* MemoViewer.app */,
 				3D1A2B2A2C1B3E4F001A2B3C /* MemoViewerTests.xctest */,
-				3D1A2B342C1B3E4F001A2B3C /* MemoViewerUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -126,15 +101,6 @@
 			path = MemoViewerTests;
 			sourceTree = SOURCE_ROOT;
 		};
-		3D1A2B372C1B3E4F001A2B3C /* MemoViewerUITests */ = {
-			isa = PBXGroup;
-			children = (
-				3D1A2B382C1B3E4F001A2B3C /* MemoViewerUITests.swift */,
-				3D1A2B3A2C1B3E4F001A2B3C /* MemoViewerUITestsLaunchTests.swift */,
-			);
-			path = MemoViewerUITests;
-			sourceTree = SOURCE_ROOT;
-		};
 		3D3C5D7A2C1B5F8C001C3D4E /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,7 +112,6 @@
 		3D3C5D7B2C1B5F9D001C3D4E /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				3D2B4C5C2C1B4E6A001B2C3D /* Memo.swift */,
 			);
 			path = Models;
 			sourceTree = SOURCE_ROOT;
@@ -154,7 +119,6 @@
 		3D3C5D7C2C1B5FAE001C3D4E /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				3D2B4C5E2C1B4E7B001B2C3D /* FileManager+Extension.swift */,
 			);
 			path = Utilities;
 			sourceTree = SOURCE_ROOT;
@@ -197,24 +161,6 @@
 			productReference = 3D1A2B2A2C1B3E4F001A2B3C /* MemoViewerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		3D1A2B332C1B3E4F001A2B3C /* MemoViewerUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3D1A2B442C1B3E4F001A2B3C /* Build configuration list for PBXNativeTarget "MemoViewerUITests" */;
-			buildPhases = (
-				3D1A2B302C1B3E4F001A2B3C /* Sources */,
-				3D1A2B312C1B3E4F001A2B3C /* Frameworks */,
-				3D1A2B322C1B3E4F001A2B3C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				3D1A2B362C1B3E4F001A2B3C /* PBXTargetDependency */,
-			);
-			name = MemoViewerUITests;
-			productName = MemoViewerUITests;
-			productReference = 3D1A2B342C1B3E4F001A2B3C /* MemoViewerUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -230,10 +176,6 @@
 						DevelopmentTeam = XXXXXXXXXX;
 					};
 					3D1A2B292C1B3E4F001A2B3C = {
-						CreatedOnToolsVersion = 15.0;
-						TestTargetID = 3D1A2B1B2C1B3E4F001A2B3C;
-					};
-					3D1A2B332C1B3E4F001A2B3C = {
 						CreatedOnToolsVersion = 15.0;
 						TestTargetID = 3D1A2B1B2C1B3E4F001A2B3C;
 					};
@@ -254,7 +196,6 @@
 			targets = (
 				3D1A2B1B2C1B3E4F001A2B3C /* MemoViewer */,
 				3D1A2B292C1B3E4F001A2B3C /* MemoViewerTests */,
-				3D1A2B332C1B3E4F001A2B3C /* MemoViewerUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -276,13 +217,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3D1A2B322C1B3E4F001A2B3C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -292,8 +226,6 @@
 			files = (
 				3D1A2B202C1B3E4F001A2B3C /* ContentView.swift in Sources */,
 				3D1A2B1E2C1B3E4F001A2B3C /* MemoViewerApp.swift in Sources */,
-				3D2B4C5D2C1B4E6A001B2C3D /* Memo.swift in Sources */,
-				3D2B4C5F2C1B4E7B001B2C3D /* FileManager+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,15 +237,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3D1A2B302C1B3E4F001A2B3C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3D1A2B3B2C1B3E4F001A2B3C /* MemoViewerUITestsLaunchTests.swift in Sources */,
-				3D1A2B392C1B3E4F001A2B3C /* MemoViewerUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -321,11 +244,6 @@
 			isa = PBXTargetDependency;
 			target = 3D1A2B1B2C1B3E4F001A2B3C /* MemoViewer */;
 			targetProxy = 3D1A2B2B2C1B3E4F001A2B3C /* PBXContainerItemProxy */;
-		};
-		3D1A2B362C1B3E4F001A2B3C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3D1A2B1B2C1B3E4F001A2B3C /* MemoViewer */;
-			targetProxy = 3D1A2B352C1B3E4F001A2B3C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -630,154 +548,6 @@
 			};
 			name = Release;
 		};
-		3D1A2B422C1B3E4F001A2B3C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_DIALECT = "gnu++20";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				COPY_PHASE_STRIP = NO;
-				DEAD_CODE_STRIPPING = YES;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_DIALECT = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
-				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
-				GCC_WARN_MISSING_PARENTHESES = YES;
-				GCC_WARN_SHADOW = YES;
-				GCC_WARN_SIGN_COMPARE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_LABEL = YES;
-				GCC_WARN_UNUSED_PARAMETER = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "MemoViewerUITests/Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.carlson.memo-viewer-UITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
-				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-				);
-				TEST_TARGET_NAME = MemoViewer;
-			};
-			name = Debug;
-		};
-		3D1A2B432C1B3E4F001A2B3C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_DIALECT = "gnu++20";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				COPY_PHASE_STRIP = NO;
-				DEAD_CODE_STRIPPING = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = NO;
-				GCC_C_LANGUAGE_DIALECT = gnu99;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = fast;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
-				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
-				GCC_WARN_MISSING_PARENTHESES = YES;
-				GCC_WARN_SHADOW = YES;
-				GCC_WARN_SIGN_COMPARE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_LABEL = YES;
-				GCC_WARN_UNUSED_PARAMETER = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "MemoViewerUITests/Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.carlson.memo-viewer-UITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 5.0;
-				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-				);
-				TEST_TARGET_NAME = MemoViewer;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -804,15 +574,6 @@
 			buildConfigurations = (
 				3D1A2B3F2C1B3E4F001A2B3C /* Debug */,
 				3D1A2B402C1B3E4F001A2B3C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3D1A2B442C1B3E4F001A2B3C /* Build configuration list for PBXNativeTarget "MemoViewerUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3D1A2B422C1B3E4F001A2B3C /* Debug */,
-				3D1A2B432C1B3E4F001A2B3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

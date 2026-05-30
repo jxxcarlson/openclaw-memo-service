@@ -223,6 +223,11 @@ bot.on('message', (msg) => {
   } else if (msg.text) {
     console.log(`[${timestamp}] Text message from ${msg.from.first_name}: ${msg.text}`);
 
+    // iPhone dictation transcribes "/memo" as "/Memo" — normalize before dispatch
+    if (/^\/Memo(\s|$)/.test(msg.text)) {
+      msg.text = '/memo' + msg.text.slice(5);
+    }
+
     if (msg.text.startsWith('/')) {
       handleMemoCommand(msg);
     } else {

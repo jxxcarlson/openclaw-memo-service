@@ -24,23 +24,28 @@ if (!fs.existsSync(inboxDir)) {
 // Store session state per user
 const userState = {};
 
-// Get today's memo file path
-function getTodayMemoFile() {
-  const today = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
-  return path.join(memosDir, `${today}.md`);
+// Local date as YYYY-MM-DD — must not use toISOString() (UTC) since entries
+// are stamped in local time and the daily file must match.
+function getLocalDateString() {
+  const d = new Date();
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, '0');
+  const day = String(d.getDate()).padStart(2, '0');
+  return `${y}-${m}-${day}`;
 }
 
-// Get or create memo file with header
+function getTodayMemoFile() {
+  return path.join(memosDir, `${getLocalDateString()}.md`);
+}
+
 function ensureMemoFile() {
   const filePath = getTodayMemoFile();
   if (!fs.existsSync(filePath)) {
-    const today = new Date().toISOString().split('T')[0];
-    fs.writeFileSync(filePath, `# ${today}\n\n`);
+    fs.writeFileSync(filePath, `# ${getLocalDateString()}\n\n`);
   }
   return filePath;
 }
 
-// Get timestamp for entries
 function getTimestamp() {
   return new Date().toLocaleTimeString('en-US', {
     hour: '2-digit',
@@ -120,8 +125,7 @@ function handleMemoCommand(msg) {
       const filePath = getTodayMemoFile();
       if (fs.existsSync(filePath)) {
         try {
-          // Create archive path (YYYY/MM/YYYY-MM-DD.md)
-          const today = new Date().toISOString().split('T')[0];
+          const today = getLocalDateString();
           const [year, month, day] = today.split('-');
           const archivePath = path.join(archiveDir, year, month, `${today}.md`);
 
